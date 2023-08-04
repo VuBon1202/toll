@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web de troll</title>
+</head>
+<style>
+    #yes{
+        position: absolute;
+        left: 100px;
+        width: 100px;
+    }
+    #no{
+        position: absolute;
+        left: 300px;
+        width: 200px;
+    }
+    .khung{
+        min-height: 100vh;
+        background: url(./banner.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    h1{
+        color: green;
+        text-align: center;
+    }
+    .vuinhon{
+        display: flex;
+        margin-top: 200px;
+        background: wheat;
+        width: 700px;
+        justify-content: space-around;
+        margin-left: 1000px;
+    }
+    img.img-troll{
+        height: 200px;
+    }
+    img{
+        width: 200px;
+    }
+    p{
+        margin-left: 20px;
+        color: red;
+    }
+</style>
+    <div class="khung">
+        <h1>Dung bị ngố</h1>
+        <button  id="yes" onclick="clickYes()">Có, Dung bị ngố</button>
+        <button id="no" onmouseover="hoveredNo()">Không Phải, Dung thông minh haha :))</button>
+        <script>
+            var hoveredNo=function(){
+                var btn = document.getElementById("no");
+                var i = Math.floor(Math.random()*400);
+                var j = Math.floor(Math.random()*800);
+                
+                btn.style.top= i+"px";
+                btn.style.left=j+"px";
+            }
+            var clickYes=function(){
+                alert("Do, tao biet ma =))")
+            }
+            </script>
+            <div class="vuinhon">
+                <div class="left">
+                    <img src="conkhi.jpg" class="img-troll" alt="">
+                    <div class="noidung">      
+                        <p>Đây là Dung</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="tao">
+                        <img src="four.jpg" alt="">
+                        <p>Đây là tao</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
